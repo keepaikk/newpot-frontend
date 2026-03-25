@@ -10,6 +10,7 @@ import authRoutes from './routes/auth';
 import marketRoutes from './routes/markets';
 import betRoutes from './routes/bets';
 import walletRoutes from './routes/wallet';
+import { botAuth } from './middleware/botAuth';
 
 // Load environment variables
 dotenv.config();
@@ -76,8 +77,8 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/markets', marketRoutes);
-app.use('/api/bets', betRoutes);
-app.use('/api/wallet', walletRoutes);
+app.use('/api/bets', botAuth, betRoutes);
+app.use('/api/wallet', botAuth, walletRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
