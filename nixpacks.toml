@@ -1,0 +1,17 @@
+# NewsoBet Africa API - Nixpacks Configuration for Dokploy
+
+[phases.setup]
+nixPkgs = ['nodejs_18']
+
+[phases.install]
+cmds = ['cd api && npm ci']
+
+[phases.build]
+cmds = ['cd api && npm run build']
+
+[start]
+cmd = 'cd api && npm start'
+
+[variables]
+NODE_ENV = 'production'
+PORT = '5000'
