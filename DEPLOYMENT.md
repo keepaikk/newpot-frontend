@@ -1,4 +1,4 @@
-# NewsoBet Africa - Production Deployment Guide
+# Newpot Africa - Production Deployment Guide
 
 ## 🚀 Backend API Deployment (Dokploy)
 
@@ -7,12 +7,12 @@
 Create a **NEW** Dokploy application for the backend API with these settings:
 
 ```
-Application Name: newsbet-api
+Application Name: newpot-api
 Repository: https://github.com/plunoo/rider.git
 Build Type: Nixpacks (NOT Docker!)
-Build Path: newsbet/api
+Build Path: newpot/api
 Port: 5000
-Domain: api.newsbet.rpnmore.com (or api.rpnmore.com)
+Domain: api.newpot.rpnmore.com (or api.rpnmore.com)
 
 Environment Variables:
 NODE_ENV=production
@@ -21,15 +21,15 @@ JWT_SECRET=your_secure_jwt_secret_here_change_this
 GEMINI_API_KEY=your_actual_gemini_api_key_here
 RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX_REQUESTS=100
-FRONTEND_URL=https://newsbet.rpnmore.com
-PRODUCTION_URL=https://newsbet.rpnmore.com
+FRONTEND_URL=https://newpot.rpnmore.com
+PRODUCTION_URL=https://newpot.rpnmore.com
 ```
 
 ### 📁 Directory Structure for Deployment
 
 Your git repository structure:
 ```
-/newsbet/
+/newpot/
 ├── frontend files (React app - already deployed)
 ├── api/                    ← Backend deployment target
 │   ├── src/
@@ -43,21 +43,21 @@ Your git repository structure:
 ### 🔧 Deployment Steps
 
 1. **Create New Dokploy Application**:
-   - Name: `newsbet-api` 
+   - Name: `newpot-api` 
    - Repository: Your existing GitHub repo
-   - **Build Path**: `newsbet/api` (crucial!)
+   - **Build Path**: `newpot/api` (crucial!)
    - **Build Type**: Nixpacks (auto-detects Node.js)
 
 2. **Configure Environment Variables**:
    ```env
    NODE_ENV=production
    PORT=5000
-   JWT_SECRET=newsbet_production_secret_make_this_long_and_random_xyz123
+   JWT_SECRET=newpot_production_secret_make_this_long_and_random_xyz123
    GEMINI_API_KEY=your_gemini_api_key
    ```
 
 3. **Set Domain**:
-   - Primary: `api.newsbet.rpnmore.com`
+   - Primary: `api.newpot.rpnmore.com`
    - Or subdomain of your existing domain
 
 4. **Deploy**:
@@ -69,7 +69,7 @@ Your git repository structure:
 
 ```bash
 # Dokploy will automatically run:
-cd newsbet/api
+cd newpot/api
 npm install
 npm run build    # Compiles TypeScript to dist/
 npm start        # Runs: node dist/index.js
@@ -80,12 +80,12 @@ npm start        # Runs: node dist/index.js
 Once deployed, your API will be available at:
 
 ```
-Health Check: https://api.newsbet.rpnmore.com/health
-Demo Status:  https://api.newsbet.rpnmore.com/api/demo/status
-Markets:      https://api.newsbet.rpnmore.com/api/markets
-Auth:         https://api.newsbet.rpnmore.com/api/auth/login
-Betting:      https://api.newsbet.rpnmore.com/api/bets
-Wallet:       https://api.newsbet.rpnmore.com/api/wallet/balance
+Health Check: https://api.newpot.rpnmore.com/health
+Demo Status:  https://api.newpot.rpnmore.com/api/demo/status
+Markets:      https://api.newpot.rpnmore.com/api/markets
+Auth:         https://api.newpot.rpnmore.com/api/auth/login
+Betting:      https://api.newpot.rpnmore.com/api/bets
+Wallet:       https://api.newpot.rpnmore.com/api/wallet/balance
 ```
 
 ### 🔄 Frontend Integration
@@ -98,7 +98,7 @@ In your frontend code, update API base URL:
 const API_BASE = 'http://localhost:5000';
 
 // After (production)
-const API_BASE = 'https://api.newsbet.rpnmore.com';
+const API_BASE = 'https://api.newpot.rpnmore.com';
 ```
 
 ### 🛡️ Security Configuration
@@ -116,13 +116,13 @@ Production environment includes:
 Test your deployed API:
 ```bash
 # Health check
-curl https://api.newsbet.rpnmore.com/health
+curl https://api.newpot.rpnmore.com/health
 
 # Demo statistics
-curl https://api.newsbet.rpnmore.com/api/demo/status
+curl https://api.newpot.rpnmore.com/api/demo/status
 
 # Markets data
-curl https://api.newsbet.rpnmore.com/api/markets
+curl https://api.newpot.rpnmore.com/api/markets
 ```
 
 ### 🎯 Post-Deployment Checklist
@@ -138,7 +138,7 @@ curl https://api.newsbet.rpnmore.com/api/markets
 ### 🚨 Troubleshooting
 
 **Common Issues:**
-1. **Build fails**: Check Build Path is `newsbet/api`
+1. **Build fails**: Check Build Path is `newpot/api`
 2. **404 errors**: Ensure using Nixpacks, not Docker
 3. **CORS errors**: Verify FRONTEND_URL environment variable
 4. **Port issues**: Backend uses port 5000, not 80

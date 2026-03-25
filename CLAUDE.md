@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-NewsoBet is a crypto prediction markets app focused on African markets, built as a React TypeScript application using Vite. The app allows users to place bets on various markets (politics, sports, crypto, etc.) using multiple cryptocurrency assets.
+Newpot is a crypto prediction markets app focused on African markets, built as a React TypeScript application using Vite. The app allows users to place bets on various markets (politics, sports, crypto, etc.) using multiple cryptocurrency assets.
 
 ## Development Commands
 
@@ -25,10 +25,10 @@ After extensive troubleshooting, the correct Dokploy configuration is:
 
 ```
 Build Type: Nixpacks (NOT Docker!)
-Build Path: newsbet
+Build Path: newpot
 Publish Directory: ./dist
 Port: 80
-Domain: newsbet.rpnmore.com
+Domain: newpot.rpnmore.com
 
 Environment Variables:
 GEMINI_API_KEY=your_actual_gemini_api_key_here
@@ -39,7 +39,7 @@ NODE_ENV=production
 
 1. **Use Nixpacks, NOT Docker**: Dokploy's official Vite React example uses Nixpacks auto-detection
 2. **Docker Issues**: Complex multi-stage Dockerfile with nginx caused 404 errors and file path issues
-3. **Build Path**: Must be set to `newsbet` since the app is in a subdirectory
+3. **Build Path**: Must be set to `newpot` since the app is in a subdirectory
 4. **Port**: Use port 80 (standard for web apps)
 5. **Environment Variables**: GEMINI_API_KEY is critical for AI features
 

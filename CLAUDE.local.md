@@ -1,10 +1,10 @@
 # CLAUDE.local.md
 
-This file contains backend development documentation and guidance for Claude Code when working with the NewsoBet Africa backend system.
+This file contains backend development documentation and guidance for Claude Code when working with the Newpot Africa backend system.
 
 ## Backend Development Overview
 
-NewsoBet Africa backend will handle:
+Newpot Africa backend will handle:
 - User authentication and management
 - Market creation and management
 - Betting logic and position tracking
@@ -37,7 +37,7 @@ Current frontend uses Zustand store with:
 - React 19 + TypeScript
 - Vite build system
 - Deployed via Dokploy Nixpacks
-- Domain: newsbet.rpnmore.com
+- Domain: newpot.rpnmore.com
 - Mobile Money Integration: MTN, Airtel, Vodafone, Tigo
 - Crypto Support: BTC, ETH, SOL, XLM, XRP, BONK
 - AI Integration: Google Gemini for market analysis
@@ -647,7 +647,7 @@ app.post('/api/v1/bets', auth, async (req, res) => {
 - All payment methods working: BTC, ETH, SOL, XLM, XRP, BONK + MTN, Airtel, Vodafone, Tigo
 - AI market analysis integrated with Gemini API
 - Responsive design optimized for African markets
-- Production deployment working on newsbet.rpnmore.com
+- Production deployment working on newpot.rpnmore.com
 
 ## Next Steps
 

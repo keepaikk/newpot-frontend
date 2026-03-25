@@ -1,7 +1,7 @@
 {
-  "name": "newsbet-africa-api",
+  "name": "newpot-africa",
   "version": "1.0.0-mvp",
-  "description": "NewsoBet Africa - Crypto Prediction Markets API for African markets",
+  "description": "Ghana-focused crypto prediction markets, expanding to Africa",
   "main": "api/dist/index.js",
   "scripts": {
     "dev": "cd api && npm run dev",
@@ -10,7 +10,14 @@
     "postinstall": "cd api && npm install",
     "test": "echo \"MVP API - No tests configured\" && exit 0"
   },
-  "keywords": ["crypto", "prediction-markets", "africa", "betting", "web3", "api"],
+  "keywords": [
+    "crypto",
+    "prediction-markets",
+    "africa",
+    "betting",
+    "web3",
+    "api"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },

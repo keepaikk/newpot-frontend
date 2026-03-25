@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Newpot Africa 🌍
 
-# Run and deploy your AI Studio app
+Ghana's premier crypto prediction markets — expanding across Africa.
 
-This contains everything you need to run your app locally.
+Bet on Ghanaian politics, sports, economy and more using Bitcoin, Ethereum, Solana and other cryptocurrencies.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ADd0Anfueqt4ux-jcTvhteyNThryV0zJ
+## Features
+- Ghana-focused prediction markets
+- Multi-crypto betting (BTC, ETH, SOL, XLM, XRP, BONK)
+- AI-powered market analysis via Google Gemini
+- Mobile-first design
 
-## Run Locally
+## Quick Start
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Tech Stack
+- React 19 + TypeScript + Vite
+- Tailwind CSS + Zustand
+- Google Gemini AI
